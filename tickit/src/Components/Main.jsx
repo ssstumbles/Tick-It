@@ -1,17 +1,19 @@
 import { Route, Routes } from 'react-router-dom'
-import About from "./About"
-import Contact from "./Contact"
-import Projects from "./Projects"
+import EventsList from "./EventsList"
+import VenueList from "./VenueList"
 import Home from "./Home"
+import VenuePage from "./VenuePage"
+import EventPage from './EventPage'
 
 const Main = () => {
     return (
      
             <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/About' element={<About />} />
-                <Route path='/Projects' element={<Projects />} />
-                <Route path='/Contact' element={<Contact />} />
+                <Route exact path='/' element={<Home />} />
+                <Route exact path='/events' element={<EventsList />} />
+                <Route exact path='/venues' element={<VenueList />} />
+                <Route exact path='/venues/:id' element={<VenuePage />} />
+                <Route exact path='/events/:id' element={<EventPage />} />
             </Routes>
       
     )
