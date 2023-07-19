@@ -1,0 +1,85 @@
+[
+    {
+        "id": 1,
+        "venue_url": "http://127.0.0.1:8000/venues/1?format=json",
+        "name": "Hollywood Bowl",
+        "location": "2301 N Highland Ave, Los Angeles, CA 90068",
+        "capacity": 17500,
+        "website_url": "https://www.hollywoodbowl.com/",
+        "events": [
+            {
+                "id": 3,
+                "venue_id": 1,
+                "name": "Prokofiev and Tchaikovsky with Dudamel",
+                "date": "2023-07-20",
+                "time": "20:00:00",
+                "ticket_price": 113,
+                "city": "Los Angeles",
+                "state": "CA",
+                "venue": "http://127.0.0.1:8000/venues/1?format=json",
+                "image_url": null
+            },
+            {
+                "id": 4,
+                "venue_id": 1,
+                "name": "Café Tacvba with the LA Phil",
+                "date": "2023-07-21",
+                "time": "20:00:00",
+                "ticket_price": 113,
+                "city": "Los Angeles",
+                "state": "CA",
+                "venue": "http://127.0.0.1:8000/venues/1?format=json",
+                "image_url": null
+            },
+            {
+                "id": 5,
+                "venue_id": 1,
+                "name": "Reggae Night XXI",
+                "date": "2023-07-23",
+                "time": "19:00:00",
+                "ticket_price": 100,
+                "city": "Los Angeles",
+                "state": "CA",
+                "venue": "http://127.0.0.1:8000/venues/1?format=json",
+                "image_url": null
+            }
+        ],
+        "image_url": null
+
+    },
+    {
+        "id": 2,
+        "venue_url": "http://127.0.0.1:8000/venues/2?format=json",
+        "name": "Hollywood Pantages Theatre",
+        "location": "6233 Hollywood Blvd, Los Angeles, CA 90028",
+        "capacity": 2703,
+        "website_url": "https://www.pantages-theater.com/",
+        "events": [
+            {
+                "id": 1,
+                "venue_id": 2,
+                "name": "Beetlejuice - The Musical",
+                "date": "2023-07-21",
+                "time": "20:00:00",
+                "ticket_price": 139,
+                "city": "Los Angeles",
+                "state": "CA",
+                "venue": "http://127.0.0.1:8000/venues/2?format=json",
+                "image_url": null
+            },
+            {
+                "id": 2,
+                "venue_id": 2,
+                "name": "Les Miserables",
+                "date": "2023-08-01",
+                "time": "19:30:00",
+                "ticket_price": 140,
+                "city": "Los Angeles",
+                "state": "CA",
+                "venue": "http://127.0.0.1:8000/venues/2?format=json",
+                "image_url": null
+            }
+        ],
+        "image_url": null
+    }
+]
