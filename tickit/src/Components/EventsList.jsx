@@ -18,7 +18,11 @@ const EventsList = () => {
     }, [])
 
     if (!events) {
-        return <div className="loading">Loading...</div>;
+        return (
+            <div className='route-body'>
+                <div className="loading">Loading...</div>
+            </div>
+        )
     }
 
     return (

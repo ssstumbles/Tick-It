@@ -7,10 +7,8 @@ const Home = () => {
                 <h1>Welcome</h1> 
                 <div className="home-links">
                     <NavLink to="venues">Venues</NavLink>
-                    <NavLink to="events">events</NavLink>
+                    <NavLink to="events">Events</NavLink>
                 </div>
-               
-                
             </div>
     )
 }

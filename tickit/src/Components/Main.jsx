@@ -4,6 +4,7 @@ import VenueList from "./VenueList"
 import Home from "./Home"
 import VenuePage from "./VenuePage"
 import EventPage from './EventPage'
+import LoginPortal from './LoginPortal'
 
 const Main = () => {
     return (
@@ -14,6 +15,7 @@ const Main = () => {
                 <Route exact path='/venues' element={<VenueList />} />
                 <Route exact path='/venues/:id' element={<VenuePage />} />
                 <Route exact path='/events/:id' element={<EventPage />} />
+                <Route exact path='/login' element={<LoginPortal/>} />
             </Routes>
       
     )
