@@ -47,7 +47,7 @@ const AdminVenueList = () => {
            {venues.map((ven) => (
                     <div key={ven.id}>
                         <div>{ven.name}</div>
-                        <AdminVenueUpdate id={ven.id} name={ven.name} location={ven.location} capacity={ven.capacity} website_url={ven.website_url}/>
+                        <AdminVenueUpdate id={ven.id} name={ven.name} location={ven.location} capacity={ven.capacity} website_url={ven.website_url} venue_description={ven.venue_description}/>
                         <button onClick={() => handleDelete(ven.id)}>X</button>
                     </div>
                 ))}

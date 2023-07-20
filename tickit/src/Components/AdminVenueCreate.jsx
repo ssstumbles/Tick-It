@@ -19,6 +19,7 @@ const AdminVenueCreate = () => {
         "location": '',
         "capacity": '',
         "website_url": '',
+        "venue_description": '',
     }
 
     const { setAxiosAction }  = useContext(AxiosContext)
@@ -52,6 +53,8 @@ const AdminVenueCreate = () => {
                 <input type="number" id="capacity" onChange={handleChange} value={formState.capacity}/>
                 <div>Website URL:</div>
                 <input type="url" id="website_url" onChange={handleChange} value={formState.website_url}/>
+                <div>Venue Description</div>
+                <textarea id="venue_description" onChange={handleChange} value={formState.venue_description}/>
                 <button className="venue-submit" type="submit">Submit</button>
             </form>
         </div>

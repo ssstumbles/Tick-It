@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from "react"
 import AxiosContext from "../AxiosContext";
 import axios from 'axios'
 
-const AdminEventUpdate = ({id, venue_id , name, date, time, ticket_price, city, state, image_url}) => {
+const AdminEventUpdate = ({id, venue_id , name, date, time, ticket_price, city, state, image_url, event_description}) => {
 
     const initialState = {
         "venue_id": venue_id,
@@ -13,6 +13,7 @@ const AdminEventUpdate = ({id, venue_id , name, date, time, ticket_price, city, 
         "city": city,
         "state": state,
         "image_url": image_url,
+        "event_description": event_description,
     }
 
     const [updateState, setUpdateState] = useState(initialState);
@@ -86,6 +87,11 @@ const AdminEventUpdate = ({id, venue_id , name, date, time, ticket_price, city, 
                 <div>
                     <label>Image_URL: </label>
                     <input type="text" id="image_url" onChange={handleChange} value={updateState.image_url}/>
+                </div>
+
+                <div>
+                    <label>Event Description: </label>
+                    <textarea id="event_description" onChange={handleChange} value={updateState.event_description}/>
                 </div>
                 
                 <div>

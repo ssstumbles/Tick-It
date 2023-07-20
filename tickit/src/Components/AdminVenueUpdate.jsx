@@ -2,13 +2,14 @@ import { useContext, useState, useEffect } from "react"
 import AxiosContext from "../AxiosContext";
 import axios from 'axios'
 
-const AdminVenueUpdate = ({id, name, location, capacity, website_url}) => {
+const AdminVenueUpdate = ({id, name, location, capacity, website_url, venue_description}) => {
 
     const initialState = {
         "name": name,
         "location": location,
         "capacity": capacity,
         "website_url": website_url,
+        "venue_description": venue_description,
     }
 
     const [updateState, setUpdateState] = useState(initialState);
@@ -63,6 +64,10 @@ const AdminVenueUpdate = ({id, name, location, capacity, website_url}) => {
                 <div>
                     <label>Website URL: </label>
                     <input type="text" id="website_url" onChange={handleChange} value={updateState.website_url}/>
+                </div>
+                <div>
+                    <label>Venue Description: </label>
+                    <textarea id="venue_description" onChange={handleChange} value={updateState.venue_description}/>
                 </div>
                 
                 <div>

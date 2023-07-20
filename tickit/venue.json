@@ -151,7 +151,7 @@
             }
         ],
         "image_url": null
-    }
+    },
     {
         "id": 5,
         "venue_url": "http://127.0.0.1:8000/venues/2?format=json",
