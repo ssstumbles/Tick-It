@@ -26,9 +26,20 @@ const VenuePage = () => {
     }
 
     return(
+        <div>
         <div className='route-body'>
             <NavLink to="/venues" className="back-link">Back</NavLink>
             <div>{venue.name}</div>
+        </div>
+        <div>
+        {venue.events.map((eve) => (
+            <NavLink to={eve.name} key={eve.id} className="event-link">
+                <div>{eve.name}</div>
+                <img src={eve.image_url} height="200px" width="200px" />
+                <div>{eve.state}</div>
+            </NavLink>
+        ))}   
+        </div>
         </div>
     )
 }
