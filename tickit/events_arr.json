@@ -58,5 +58,65 @@
         "state": "CA",
         "venue": "http://127.0.0.1:8000/venues/1?format=json",
         "image_url": null
+    },
+    {
+        "id": 6,
+        "venue_id": 3,
+        "name": "CIGARETTES AFTER SEX",
+        "date": "2023-09-02",
+        "time": "19:00:00",
+        "ticket_price": 100,
+        "city": "Chicago",
+        "state": "IL",
+        "venue": "http://127.0.0.1:8000/venues/2?format=json",
+        "image_url": null
+    },
+    {
+        "id": 7,
+        "venue_id": 3,
+        "name": "DANIEL CAESAR PRESENTS SUPERPOWERS WORLD TOUR",
+        "date": "2023-09-03",
+        "time": "19:00:00",
+        "ticket_price": 100,
+        "city": "chicago",
+        "state": "IL",
+        "venue": "http://127.0.0.1:8000/venues/2?format=json",
+        "image_url": null
+    },
+    {
+        "id": 8,
+        "venue_id": 4,
+        "name": "Electric Feels",
+        "date": "2023-07-28",
+        "time": "21:00:00",
+        "ticket_price": 15,
+        "city": "Chicago",
+        "state": "IL",
+        "venue": "http://127.0.0.1:8000/venues/2?format=json",
+        "image_url": null
+    },
+    {
+        "id": 9,
+        "venue_id": 4,
+        "name": "Emancipator",
+        "date": "2023-08-11",
+        "time": "19:00:00",
+        "ticket_price": 25,
+        "city": "chicago",
+        "state": "IL",
+        "venue": "http://127.0.0.1:8000/venues/2?format=json",
+        "image_url": null
+    },
+    {
+        "id": 10,
+        "venue_id": 5,
+        "name": "Macklemore: The BEN Tour",
+        "date": "2023-10-14",
+        "time": "19:00:00",
+        "ticket_price": 150,
+        "city": "San Francisco",
+        "state": "CA",
+        "venue": "http://127.0.0.1:8000/venues/2?format=json",
+        "image_url": null
     }
 ]
