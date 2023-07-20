@@ -1,18 +1,28 @@
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import AxiosContext from "../AxiosContext";
 import axios from 'axios'
 
 const AdminCreate = () => {
 
+    const [venues, setVenues] = useState();
+
+    useEffect(() => {
+        const getVenues = async () => {
+            const response = await axios.get(`http://127.0.0.1:8000/venues`)
+            setVenues(response.data)
+        }
+        getVenues()
+    },[])
+
     const initialState = {
-        "venue_id": undefined,
-        "name": undefined,
-        "date": undefined,
-        "time": undefined,
-        "ticket_price": undefined,
-        "city": undefined,
-        "state": undefined,
-        "image_url": undefined,
+        "venue_id": '',
+        "name": '',
+        "date": '',
+        "time": '',
+        "ticket_price": 0,
+        "city": '',
+        "state": '',
+        "image_url": '',
     }
 
     const { setAxiosAction }  = useContext(AxiosContext)
@@ -32,31 +42,19 @@ const AdminCreate = () => {
         setAxiosAction(true)
     };
 
-
-    // const handleCreate = async () => {
-    //         await axios.post(
-    //             `http://127.0.0.1:8000/events/`,
-    //             {
-    //                 "venue_id": 2,
-    //                 "name": "Les Miserables",
-    //                 "date": "2023-08-01",
-    //                 "time": "19:30:00",
-    //                 "ticket_price": 140,
-    //                 "city": "Los Angeles",
-    //                 "state": "CA",
-    //                 "image_url": null
-    //             }
-    //         );
-            
-    // }
-    // will include a form to handle the submission instead of a static new event
+    if (!venues) { return <div>Loading...</div> }
 
     return (
         <div className="create-event">
             <form onSubmit={handleSubmit}>
                 <div>Add An Event</div>
                 <div>Venue:</div>
-                <input type="number" id="venue_id" onChange={handleChange} value={formState.venue_id}/>
+                <select onChange={handleChange} id="venue_id" value={formState.venue_id}>
+                    <option value=""> - - Select Venue - - </option>
+                    {venues.map((ven) => (
+                        <option key={ven.id} value={ven.id}>{ven.name}</option>
+                    ))}
+                </select>
                 <div>Name:</div>
                 <input type="text" id="name" onChange={handleChange} value={formState.name}/>
                 <div>Date:</div>
