@@ -50,7 +50,7 @@ const AdminList = () => {
                     <div to={eve.name} key={eve.id} className="event-link">
                         <div>{eve.name}</div>
                         <button onClick={() => handleDelete(eve.id)}>X</button>
-                        <AdminUpdate id={eve.id} name={eve.name} date={eve.date} time={eve.time} ticket_price={eve.ticket_price} city={eve.city} state={eve.state} image_url={eve.image_url}/>
+                        <AdminUpdate id={eve.id} venue_id={eve.venue_id} name={eve.name} date={eve.date} time={eve.time} ticket_price={eve.ticket_price} city={eve.city} state={eve.state} image_url={eve.image_url}/>
                     </div>
                 ))}
         </>
