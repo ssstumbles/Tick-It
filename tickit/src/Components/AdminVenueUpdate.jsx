@@ -2,17 +2,13 @@ import { useContext, useState, useEffect } from "react"
 import AxiosContext from "../AxiosContext";
 import axios from 'axios'
 
-const AdminUpdate = ({id, venue_id , name, date, time, ticket_price, city, state, image_url}) => {
+const AdminVenueUpdate = ({id, name, location, capacity, website_url}) => {
 
     const initialState = {
-        "venue_id": venue_id,
         "name": name,
-        "date": date,
-        "time": time,
-        "ticket_price": ticket_price,
-        "city": city,
-        "state": state,
-        "image_url": image_url,
+        "location": location,
+        "capacity": capacity,
+        "website_url": website_url,
     }
 
     const [updateState, setUpdateState] = useState(initialState);
@@ -29,18 +25,16 @@ const AdminUpdate = ({id, venue_id , name, date, time, ticket_price, city, state
         console.log(id)
         console.log(updateState)
         try {
-            await axios.put(`http://127.0.0.1:8000/events/${id}`, updateState)
+            await axios.put(`http://127.0.0.1:8000/venues/${id}`, updateState)
 
             console.log(updateState.field)
 
             setEditMode(false)
             setAxiosAction(true)
-
         } catch (error) {
             console.log(error);
         }
     }
-
     const handleClose = () => {
         setEditMode(false)
         setUpdateState(initialState)
@@ -55,42 +49,24 @@ const AdminUpdate = ({id, venue_id , name, date, time, ticket_price, city, state
         <>
             <div className="edit-div">
                 <div>
-                    <label>Event Name: </label>
+                    <label>Venue Name: </label>
                     <input type="text" id="name" onChange={handleChange} value={updateState.name}/>
                 </div>
                 <div>
-                    <label>Event Date: </label>
-                    <input type="date" id="date" onChange={handleChange} value={updateState.date}/>
+                    <label>Location: </label>
+                    <input type="text" id="location" onChange={handleChange} value={updateState.location}/>
                 </div>
-
                 <div>
-                    <label>Event Time: </label>
-                    <input type="time" id="time" onChange={handleChange} value={updateState.time}/>
+                    <label>Capacity: </label>
+                    <input type="number" id="capacity" onChange={handleChange} value={updateState.capacity}/>
                 </div>
-                
                 <div>
-                    <label>Ticket Price: </label>
-                    <input type="number" id="ticket_price" onChange={handleChange} value={updateState.ticket_price}/>
-                </div>
-
-                <div>
-                    <label>City: </label>
-                    <input type="text" id="city" onChange={handleChange} value={updateState.city}/>
-                </div>
-                
-                <div>
-                    <label>State: </label>
-                    <input type="text" id="state" onChange={handleChange} value={updateState.state}/>
-                </div>
-
-                <div>
-                    <label>Image_URL: </label>
-                    <input type="text" id="image_url" onChange={handleChange} value={updateState.image_url}/>
+                    <label>Website URL: </label>
+                    <input type="text" id="website_url" onChange={handleChange} value={updateState.website_url}/>
                 </div>
                 
                 <div>
                 <button className="update-button" onClick={handleUpdate}>Update</button>
-                {/* <button onClick={() => ></button> */}
                 </div>
             </div>
             <button onClick={handleClose}>Close</button>
@@ -100,4 +76,4 @@ const AdminUpdate = ({id, venue_id , name, date, time, ticket_price, city, state
 }
 
 
-export default AdminUpdate
+export default AdminVenueUpdate
