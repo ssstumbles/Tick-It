@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from "react"
 import AxiosContext from "../AxiosContext";
 import axios from 'axios'
 
-const AdminCreate = () => {
+const AdminEventCreate = () => {
 
     const [venues, setVenues] = useState();
 
@@ -78,4 +78,4 @@ const AdminCreate = () => {
     )
 }
 
-export default AdminCreate
+export default AdminEventCreate

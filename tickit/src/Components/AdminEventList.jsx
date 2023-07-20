@@ -2,9 +2,9 @@ import axios from "axios";
 import { useEffect, useState, useContext } from "react"
 import AxiosContext from "../AxiosContext";
 
-import AdminUpdate from "./AdminUpdate"
+import AdminEventUpdate from "./AdminEventUpdate"
 
-const AdminList = () => {
+const AdminEventList = () => {
 
     const [events, setEvents] = useState();
     
@@ -38,9 +38,7 @@ const AdminList = () => {
 
     if (!events) {
         return (
-            <div className='route-body'>
                 <div className="loading">Loading...</div>
-            </div>
         )
     }
     
@@ -49,7 +47,7 @@ const AdminList = () => {
            {events.map((eve) => (
                     <div key={eve.id}>
                         <div>{eve.name}</div>
-                        <AdminUpdate id={eve.id} venue_id={eve.venue_id} name={eve.name} date={eve.date} time={eve.time} ticket_price={eve.ticket_price} city={eve.city} state={eve.state} image_url={eve.image_url}/>
+                        <AdminEventUpdate id={eve.id} venue_id={eve.venue_id} name={eve.name} date={eve.date} time={eve.time} ticket_price={eve.ticket_price} city={eve.city} state={eve.state} image_url={eve.image_url}/>
                         <button onClick={() => handleDelete(eve.id)}>X</button>
                     </div>
                 ))}
@@ -57,4 +55,4 @@ const AdminList = () => {
     )
 }
 
-export default AdminList
+export default AdminEventList
