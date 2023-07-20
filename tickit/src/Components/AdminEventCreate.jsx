@@ -23,6 +23,7 @@ const AdminEventCreate = () => {
         "city": '',
         "state": '',
         "image_url": '',
+        "event_description": '',
     }
 
     const { setAxiosAction }  = useContext(AxiosContext)
@@ -69,7 +70,8 @@ const AdminEventCreate = () => {
                 <input type="text" id="state" onChange={handleChange} value={formState.state}/>
                 <div>Image URL:</div>
                 <input type="url" id="image_url" onChange={handleChange} value={formState.image_url}/>
-
+                <div>Description:</div>
+                <textarea id="event_description" onChange={handleChange} value={formState.event_description}/>
                 <button className="event-submit" type="submit">
                     Submit
                 </button>
