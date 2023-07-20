@@ -29,17 +29,7 @@ const AdminUpdate = ({id, venue_id , name, date, time, ticket_price, city, state
         console.log(id)
         console.log(updateState)
         try {
-            await axios.put(`http://127.0.0.1:8000/events/${id}`, { 
-                "venue_id": updateState.venue_id,
-                "name": updateState.name,
-                "date": updateState.date,
-                "time": updateState.time,
-                "ticket_price": updateState.ticket_price,
-                "city": updateState.city,
-                "state": updateState.state,
-                "image_url": updateState.image_url,
-            }
-        );
+            await axios.put(`http://127.0.0.1:8000/events/${id}`, updateState)
 
             console.log(updateState.field)
 

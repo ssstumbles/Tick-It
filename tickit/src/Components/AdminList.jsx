@@ -11,7 +11,7 @@ const AdminList = () => {
     const { axiosAction, setAxiosAction }  = useContext(AxiosContext)
 
     useEffect(() => {
-        const getEvents = async() => {
+        const getEvents = async () => {
             const response = await axios.get(`http://127.0.0.1:8000/events`)
             setEvents(response.data)
         }
@@ -47,7 +47,7 @@ const AdminList = () => {
     return (
         <>
            {events.map((eve) => (
-                    <div to={eve.name} key={eve.id} className="event-link">
+                    <div key={eve.id}>
                         <div>{eve.name}</div>
                         <button onClick={() => handleDelete(eve.id)}>X</button>
                         <AdminUpdate id={eve.id} venue_id={eve.venue_id} name={eve.name} date={eve.date} time={eve.time} ticket_price={eve.ticket_price} city={eve.city} state={eve.state} image_url={eve.image_url}/>
