@@ -50,7 +50,7 @@ const AdminCreate = () => {
                 <div>Add An Event</div>
                 <div>Venue:</div>
                 <select onChange={handleChange} id="venue_id" value={formState.venue_id}>
-                    <option value="" disable >Select Venue</option>
+                    <option value=""> - - Select Venue - - </option>
                     {venues.map((ven) => (
                         <option key={ven.id} value={ven.id}>{ven.name}</option>
                     ))}
