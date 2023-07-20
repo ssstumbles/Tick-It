@@ -30,6 +30,8 @@ const EventPage = () => {
             <NavLink to="/events" className="back-link">Back</NavLink>
             <div>{event.name}</div>
             <img src={event.image_url}/>
+            <div>{event.date}</div>
+            <div>`{event.city}, {event.state}`</div>
         </div>
        
     )

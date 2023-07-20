@@ -34,7 +34,8 @@ const EventsList = () => {
                 {events.map((eve) => (
                     <NavLink to={eve.name} key={eve.id} className="event-link">
                         <div>{eve.name}</div>
-                        <img src={eve.image_url}/>
+                        <img src={eve.image_url} height="200px" width="200px" />
+                        <div>{eve.state}</div>
                     </NavLink>
                 ))}
             </div>
