@@ -5,8 +5,10 @@ import Home from "./Home"
 import VenuePage from "./VenuePage"
 import EventPage from './EventPage'
 import LoginPortal from './LoginPortal'
+import AdminPage from './AdminPage'
 
 const Main = () => {
+
     return (
      
             <Routes>
@@ -16,6 +18,7 @@ const Main = () => {
                 <Route exact path='/venues/:id' element={<VenuePage />} />
                 <Route exact path='/events/:id' element={<EventPage />} />
                 <Route exact path='/login' element={<LoginPortal/>} />
+                <Route exact path='/admin' element={<AdminPage/>} />
             </Routes>
       
     )
