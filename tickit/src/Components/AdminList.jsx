@@ -49,8 +49,8 @@ const AdminList = () => {
            {events.map((eve) => (
                     <div key={eve.id}>
                         <div>{eve.name}</div>
-                        <button onClick={() => handleDelete(eve.id)}>X</button>
                         <AdminUpdate id={eve.id} venue_id={eve.venue_id} name={eve.name} date={eve.date} time={eve.time} ticket_price={eve.ticket_price} city={eve.city} state={eve.state} image_url={eve.image_url}/>
+                        <button onClick={() => handleDelete(eve.id)}>X</button>
                     </div>
                 ))}
         </>

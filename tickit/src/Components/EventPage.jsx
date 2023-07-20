@@ -29,6 +29,7 @@ const EventPage = () => {
         <div className='route-body'>
             <NavLink to="/events" className="back-link">Back</NavLink>
             <div>{event.name}</div>
+            <img src={event.image_url}/>
         </div>
        
     )
