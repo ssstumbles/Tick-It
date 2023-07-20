@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import eventsArray from "../../events.json"
+import eventsArray from "../../events_arr.json"
 import { NavLink } from "react-router-dom";
 
 const EventsList = () => { 
@@ -8,14 +8,16 @@ const EventsList = () => {
     const [events, setEvents] = useState();
 
     useEffect(() => {
-        // const getEvents = async() => {
-        //     const response = await axios.get(`url/events`)
-        //     setEvents(response.data.events)
-        // }
-        // console.log('got events')
-        // getEvents()
-        setEvents(eventsArray)
+        const getEvents = async() => {
+            const response = await axios.get(`http://127.0.0.1:8000/events`)
+            setEvents(response.data)
+        }
+        console.log('got events')
+        getEvents()
+        // setEvents(eventsArray)
     }, [])
+
+    console.log(events)
 
     if (!events) {
         return (

@@ -1,25 +1,26 @@
 import { useState, useEffect } from "react"
 import { NavLink, useParams } from "react-router-dom";
-import venueArray from "../../venue.json"
+// import venueArray from "../../venue.json"
+import axios from 'axios'
 
 const VenuePage = () => {
-    const [venue, setVenue] = useState();
+    const [ venue, setVenue ] = useState();
     let { id } = useParams()
 
     useEffect(() => {
-        // const getEvents = async() => {
-        //     const response = await axios.get(`url/events`)
-        //     setEvents(response.data.events)
-        // }
-        // console.log('got events')
-        // getEvents()
-        setVenue(venueArray.find((ven) => ven.name === id ))
-    }, [id])
+        const getVenue = async() => {
+            const response = await axios.get(`http://127.0.0.1:8000/venues/`)
+            setVenue(response.data.find((ven) => ven.name === id ))
+        }
+        console.log('got venue')
+        getVenue()
+        
+    }, [])
 
     if (!venue) {
         return (
             <div className='route-body'>
-                <div className="loading">Loading...</div>;
+                <div className="loading">Loading...</div>
             </div>
         )
     }

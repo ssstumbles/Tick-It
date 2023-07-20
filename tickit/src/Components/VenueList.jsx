@@ -8,13 +8,14 @@ const VenueList = () => {
     const [venues, setVenues] = useState();
 
     useEffect(() => {
-        // const getVenue = async() => {
-        //     const response = await axios.get(`url/venues`)
-        //     setVenue(response.data.venues)
-        // }
-        // console.log('got venues')
-        // getVenue()
-        setVenues(venueArray)
+        const getVenues = async() => {
+            const response = await axios.get(`http://127.0.0.1:8000/venues/`)
+            setVenues(response.data)
+            console.log(response)
+        }
+        console.log('got venues')
+        getVenues()
+        // setVenues(venueArray)
     }, [])
 
     if (!venues) {
