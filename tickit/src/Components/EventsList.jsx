@@ -35,7 +35,8 @@ const EventsList = () => {
                     <NavLink to={eve.name} key={eve.id} className="event-link">
                         <div>{eve.name}</div>
                         <img src={eve.image_url} height="200px" width="200px" />
-                        <div>{eve.state}</div>
+                        <div>{eve.date} | {eve.time}</div>
+                        <div>{eve.city}, {eve.state}</div>
                     </NavLink>
                 ))}
             </div>

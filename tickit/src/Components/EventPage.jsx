@@ -26,12 +26,15 @@ const EventPage = () => {
     }
 
     return(
+        
         <div className='route-body'>
             <NavLink to="/events" className="back-link">Back</NavLink>
             <div>{event.name}</div>
-            <img src={event.image_url}/>
+            <img src={event.image_url} height='500px' width='500px'/>
             <div>{event.date}</div>
-            <div>`{event.city}, {event.state}`</div>
+            <div>{event.city}, {event.state}</div>
+            <div>{event.event_description}</div>
+            <div>Ticket Price: ${event.ticket_price}</div>
         </div>
        
     )
