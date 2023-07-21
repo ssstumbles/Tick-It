@@ -24,13 +24,13 @@ const AdminPage = () => {
                 <div className="admin-panel">
                     { eventsPage ? (
                         <>
-                            <div className='admin-page-title'>VENUES</div>
+                            <div className='admin-page-title'>EVENTS</div>
                             <AdminEventList />
                             <AdminEventCreate />
                         </>
                     ) : (
                         <>
-                            <div className='admin-page-title'>EVENTS</div>
+                            <div className='admin-page-title'>VENUES</div>
                             <AdminVenueList />
                             <AdminVenueCreate />
                         </>
