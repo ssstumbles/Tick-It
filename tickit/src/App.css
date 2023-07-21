@@ -1,11 +1,11 @@
-.app {
+/* .app {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-}
+} */
 
 .header {
   font-size: 23px;
@@ -17,7 +17,7 @@
   align-items: center;
   height: 10vh;
   width: 100%;
-  background-color: transparent;
+  background-color: #242424;
   border: 1px solid rgb(255, 255, 255);
   padding: 0 1rem;
 }
@@ -51,19 +51,19 @@
  
 }
 
-.event-link {
-  font-size: 18px;
-  text-decoration: none;
-  color: burlywood;
-  padding-top: 15px;
-  padding-bottom: 15px;
+
+.vlroute-body{
+  padding-top: 70px;
+  text-align: center;
 }
 
 .venue-link {
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  justify-content: center;
   text-decoration: none;
   color: burlywood;
-
+  align-items: center;
 }
 
 .back-link {
@@ -104,7 +104,7 @@
 }
 
 .event-description {
-  margin: 0 300px;
+  margin: 0 550px;
 }
 
 .venue-list {
@@ -112,10 +112,48 @@
     flex-wrap: wrap;
     flex-direction: column;
     gap: 30px;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     height: 100vh;
-    padding-top: 100px;
-
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
+
+/* EVENT LIST */
+
+.event-list1 {
+  padding-top: 60px;
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.event-link {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: burlywood;
+  flex-basis: calc(25% - 30px); 
+}
+
+.event-link img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.event-link div {
+  margin-top: 10px;
+  word-break: break-word; 
+}

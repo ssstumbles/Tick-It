@@ -20,14 +20,14 @@ const VenueList = () => {
 
     if (!venues) {
         return (
-            <div className='route-body'>
+            <div className='vlroute-body'>
                 <div className="loading">Loading...</div>
             </div>
         )
     }
 
     return (
-        <div className='route-body'>
+        <div className='vlroute-body'>
              <h1>Venues</h1> 
              <div className="venue-list">
                 {venues.map((ven) => (

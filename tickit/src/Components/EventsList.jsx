@@ -28,12 +28,13 @@ const EventsList = () => {
     }
 
     return (
-        <div className='route-body'>
+        <div className='event-list1'>
             <h1>Events</h1>  
+            
             <div className="event-list">
                 {events.map((eve) => (
                     <NavLink to={eve.name} key={eve.id} className="event-link">
-                        <div>{eve.name}</div>
+                        <div style={{fontWeight: 'bold'}}>{eve.name}</div>
                         <img src={eve.image_url} height="200px" width="200px" />
                         <div>{eve.date} | {eve.time}</div>
                         <div>{eve.city}, {eve.state}</div>
