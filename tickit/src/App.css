@@ -157,3 +157,39 @@
   margin-top: 10px;
   word-break: break-word; 
 }
+
+
+/* HOME */
+
+.home {
+  background-image: url("IMG_7210.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.home-L1 {
+  font-size: 60px;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+.home-L2 {
+  font-size: 22px;
+  padding-left: 50px;
+  padding-top: 40px;
+}
+
+.home-L3 {
+  font-size: 47px;
+  padding-left: 50px;
+  margin-bottom: 200px;
+}
+
+.home-nav-link {
+  font-size: 30px;
+  padding-left: 50px;
+  margin-top: 20px;
+}
