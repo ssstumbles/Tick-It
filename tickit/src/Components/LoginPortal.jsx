@@ -42,7 +42,7 @@ const LoginPortal = () => {
     },[formState])
 
     return (
-        <div className='route-body' >
+        <div className='login-route-body' >
             <label htmlFor='username'>Username:</label>
             <input id='username' type='text' onChange={handleChange} value={formState.username}/>
            

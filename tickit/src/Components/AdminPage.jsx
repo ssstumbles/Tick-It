@@ -16,20 +16,27 @@ const AdminPage = () => {
 
     return (
         <AxiosContext.Provider value={{ axiosAction, setAxiosAction}}>
-            <div className='route-body'>
-                <button onClick={() => setEventsPage(false)}>Venues</button>
-                <button onClick={() => setEventsPage(true)}>Events</button>
-                { eventsPage ? (
-                    <>
-                        <AdminEventList />
-                        <AdminEventCreate />
-                    </>
-                ) : (
-                    <>
-                        <AdminVenueList />
-                        <AdminVenueCreate />
-                    </>
-                )}
+            <div className='admin-route-body'>
+                <div className='admin-options'>
+                    <button onClick={() => setEventsPage(false)}>Venues</button>
+                    <button onClick={() => setEventsPage(true)}>Events</button>
+                </div>
+                <div className="admin-panel">
+                    { eventsPage ? (
+                        <>
+                            <div className='admin-page-title'>VENUES</div>
+                            <AdminEventList />
+                            <AdminEventCreate />
+                        </>
+                    ) : (
+                        <>
+                            <div className='admin-page-title'>EVENTS</div>
+                            <AdminVenueList />
+                            <AdminVenueCreate />
+                        </>
+                    )}
+                </div>
+                
                 
             </div>
         </AxiosContext.Provider>

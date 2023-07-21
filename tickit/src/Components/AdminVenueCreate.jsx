@@ -39,10 +39,10 @@ const AdminVenueCreate = () => {
         setAxiosAction(true)
     };
 
-    if (!venues) { return <div>Loading...</div> }
+    if (!venues) { return <div className="admin-create" >Loading...</div> }
 
     return (
-        <div className="create-event">
+        <div className="admin-create">
             <form onSubmit={handleSubmit}>
                 <div>Add A Venue</div>
                 <div>Name:</div>

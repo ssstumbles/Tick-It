@@ -46,15 +46,16 @@
   text-align: center;
 }
 
-.route-body {
-  margin-top: 10vh;
- 
+.vlroute-body{
+  padding-top: 10vh;
+  text-align: center;
 }
 
-
-.vlroute-body{
-  padding-top: 70px;
-  text-align: center;
+.list-header {
+  position: fixed;
+  top: 7vh;
+  left: 3vw;
+  font-size: 5vmin;
 }
 
 .venue-link {
@@ -68,19 +69,77 @@
 
 .back-link {
   color: burlywood;
+  align-self: flex-start;
+  margin-left: 4vmin;
+  margin-top: 2vmin;
+  margin-bottom: -3vmin;
+}
 
+.admin-route-body {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-options {
+  height: 12vmin;
+}
+
+.admin-options > button {
+  padding: 1vmin;
+  padding-left: 2vmin;
+  padding-right: 2vmin;
+  margin: 4vmin;
+}
+
+.admin-panel {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+.admin-page-title {
+  position: fixed;
+  left: 10vmin;
+  top: 20vh;
+  font-size: 10vmin;
+  color: burlywood;
+}
+
+.admin-list {
+  width: 30vw;
+}
+
+.admin-list > * {
+  border: 1px solid white;
+  margin: 2vmin;
+  padding: 2vmin;
+}
+
+.admin-create {
+  position: fixed;
+  right: 10vmin;
+  top: 20vh;
+  width: 20vw;
+  padding: 2vmin;
+  border: 1px solid white;
 }
 
 .edit-div {
   display: flex;
   flex-direction: column;
   padding: 2vmin;
-  border: 1px solid white;
+  border: 1px solid burlywood;
+  width: 20vw;
 }
 
-.create-event {
-  padding: 2vmin;
-  border: 1px solid white;
+.edit-div > * {
+  margin: .5vmin;
+}
+
+.admin-edit-button {
+  margin-right: .5vmin;
 }
 
 
@@ -88,9 +147,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding-top: 150px;
+  height: 90vh;
+  margin-top: 10vh;
+}
+
+.login-route-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
 }
 
 .image-container {
@@ -117,7 +182,8 @@
     gap: 30px;
     /* align-items: center; */
     /* justify-content: center; */
-    height: 100vh;
+    margin-top: 7vh;
+    height: 90vh;
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -126,7 +192,7 @@
 /* EVENT LIST */
 
 .event-list1 {
-  padding-top: 60px;
+  margin-top: 17vh;
 }
 
 .event-list {
@@ -161,15 +227,34 @@
   word-break: break-word; 
 }
 
+/* Venues */
+
+.venue-page-list {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.venue-description {
+  margin-bottom: 2vmin;
+}
+
+.venue-related-link {
+  padding: 2vmin;
+  border-top: 1px solid white;
+}
+
 
 /* HOME */
 
 .home {
+  margin-top: 10vh;
   background-image: url("IMG_7210.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 .home-L1 {

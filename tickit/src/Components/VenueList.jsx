@@ -28,7 +28,7 @@ const VenueList = () => {
 
     return (
         <div className='vlroute-body'>
-             <h1>Venues</h1> 
+             <h1 className='list-header'>Venues</h1> 
              <div className="venue-list">
                 {venues.map((ven) => (
                     <NavLink to={ven.name} key={ven.id} className="venue-link">
