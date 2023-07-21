@@ -23,11 +23,9 @@ const LoginPortal = () => {
         password: '',
     }
     
-    
     const [buttonStatus, setButtonStatus] = useState(true);
     const [formState, setFormState] = useState(default_input)
     const navigate = useNavigate();
-
 
     const handleChange = (e) => {
         setFormState({...formState, [e.target.id]: e.target.value})
@@ -55,5 +53,4 @@ const LoginPortal = () => {
         </div>
     )
 }
-
 export default LoginPortal
