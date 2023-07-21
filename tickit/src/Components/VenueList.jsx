@@ -9,7 +9,7 @@ const VenueList = () => {
 
     useEffect(() => {
         const getVenues = async() => {
-            const response = await axios.get(`http://127.0.0.1:8000/venues/`)
+            const response = await axios.get(`https://tick-it-backend-production.up.railway.app/venues/`)
             setVenues(response.data)
             console.log(response)
         }

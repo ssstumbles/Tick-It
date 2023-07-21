@@ -30,7 +30,7 @@ const AdminEventUpdate = ({id, venue_id , name, date, time, ticket_price, city, 
         console.log(id)
         console.log(updateState)
         try {
-            await axios.put(`http://127.0.0.1:8000/events/${id}`, updateState)
+            await axios.put(`https://tick-it-backend-production.up.railway.app/events/${id}`, updateState)
 
             console.log(updateState.field)
 
