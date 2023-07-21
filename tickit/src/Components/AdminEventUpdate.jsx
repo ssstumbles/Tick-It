@@ -49,7 +49,7 @@ const AdminEventUpdate = ({id, venue_id , name, date, time, ticket_price, city, 
 
 
     if (!editMode) {
-        return <button onClick={() => setEditMode(true)}>Edit</button>
+        return <button className='admin-edit-button' onClick={() => setEditMode(true)}>Edit</button>
     }
 
     return (

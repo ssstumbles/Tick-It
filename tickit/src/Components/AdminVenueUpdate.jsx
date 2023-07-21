@@ -43,38 +43,33 @@ const AdminVenueUpdate = ({id, name, location, capacity, website_url, venue_desc
 
 
     if (!editMode) {
-        return <button onClick={() => setEditMode(true)}>Edit</button>
+        return <button className='admin-edit-button' onClick={() => setEditMode(true)}>Edit</button>
     }
 
     return (
         <>
             <div className="edit-div">
-                <div>
+                
                     <label>Venue Name: </label>
                     <input type="text" id="name" onChange={handleChange} value={updateState.name}/>
-                </div>
-                <div>
+                
                     <label>Location: </label>
                     <input type="text" id="location" onChange={handleChange} value={updateState.location}/>
-                </div>
-                <div>
+                
                     <label>Capacity: </label>
                     <input type="number" id="capacity" onChange={handleChange} value={updateState.capacity}/>
-                </div>
-                <div>
+                
                     <label>Website URL: </label>
                     <input type="text" id="website_url" onChange={handleChange} value={updateState.website_url}/>
-                </div>
-                <div>
+                
                     <label>Venue Description: </label>
                     <textarea id="venue_description" onChange={handleChange} value={updateState.venue_description}/>
-                </div>
                 
-                <div>
-                <button className="update-button" onClick={handleUpdate}>Update</button>
-                </div>
+                
+                    <button className="update-button" onClick={handleUpdate}>Update</button>
+                    <button onClick={handleClose}>Close</button>
             </div>
-            <button onClick={handleClose}>Close</button>
+            
         </>
        
     )

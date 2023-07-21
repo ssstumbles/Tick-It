@@ -29,7 +29,7 @@ const EventsList = () => {
 
     return (
         <div className='event-list1'>
-            <h1>Events</h1>  
+            <h1 className='list-header'>Events</h1>  
             
             <div className="event-list">
                 {events.map((eve) => (
