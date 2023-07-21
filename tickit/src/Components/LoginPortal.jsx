@@ -38,6 +38,8 @@ const LoginPortal = () => {
             setButtonStatus(false)
         } else {
             setButtonStatus(true)
+            console.log(formState.username)
+            console.log(formState.password)
         }
     },[formState])
 
