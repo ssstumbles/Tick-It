@@ -74,12 +74,15 @@
 .edit-div {
   display: flex;
   flex-direction: column;
+  padding: 2vmin;
+  border: 1px solid white;
 }
 
 .create-event {
   padding: 2vmin;
   border: 1px solid white;
 }
+
 
 .route-body {
   display: flex;
