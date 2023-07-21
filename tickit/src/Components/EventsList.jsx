@@ -9,7 +9,7 @@ const EventsList = () => {
 
     useEffect(() => {
         const getEvents = async() => {
-            const response = await axios.get(`http://127.0.0.1:8000/events`)
+            const response = await axios.get(`https://tick-it-backend-production.up.railway.app/events`)
             setEvents(response.data)
         }
         console.log('got events')
