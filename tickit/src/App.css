@@ -7,8 +7,9 @@
 
 }
 
-
 .header {
+  font-size: 23px;
+  font-weight: bold;
   position: fixed;
   top: 0;
   display: flex;
@@ -47,16 +48,26 @@
 
 .route-body {
   margin-top: 10vh;
+ 
 }
 
-.venue-link, .event-link {
+.event-link {
+  font-size: 18px;
+  text-decoration: none;
+  color: burlywood;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.venue-link {
+  font-size: 20px;
   text-decoration: none;
   color: burlywood;
 
 }
 
 .back-link {
-  color: purple;
+  color: burlywood;
 
 }
 
@@ -68,5 +79,43 @@
 .create-event {
   padding: 2vmin;
   border: 1px solid white;
+}
+
+.route-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 150px;
+}
+
+.image-container {
+  background-size: cover;
+  background-position: center;
+}
+
+.date-time, .city-state, .event-description, .ticket-price {
+  font-size: 18px;
+}
+
+.ticket-price {
+  padding-bottom: 50px;
+}
+
+.event-description {
+  margin: 0 300px;
+}
+
+.venue-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 100px;
+
 }
 

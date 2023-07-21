@@ -33,7 +33,7 @@ const VenueList = () => {
                 {venues.map((ven) => (
                     <NavLink to={ven.name} key={ven.id} className="venue-link">
                         <div>{ven.name}</div>
-                        <img src={ven.image_url}/>
+                        <img src={ven.image_url} height='600px' width='600px' />
                     </NavLink>
                 ))}
              </div>
