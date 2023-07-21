@@ -40,5 +40,3 @@ Tick-It is a full-stack SPA that allows users to search for venues and events in
 [Wireframe](https://www.figma.com/file/b9pg3JLuXp4kW2LKfSJ9SU/Tick-It?type=design&node-id=0%3A1&mode=design&t=yDYjDLL4eaioYM2J-1)
 
 
-### Stay Tuned
-Deployment pending :cursing_face:
