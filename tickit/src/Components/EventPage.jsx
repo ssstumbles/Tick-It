@@ -29,12 +29,18 @@ const EventPage = () => {
         
         <div className='route-body'>
             <NavLink to="/events" className="back-link">Back</NavLink>
-            <div>{event.name}</div>
-            <img src={event.image_url} height='500px' width='500px'/>
-            <div>{event.date}</div>
-            <div>{event.city}, {event.state}</div>
-            <div>{event.event_description}</div>
-            <div>Ticket Price: ${event.ticket_price}</div>
+            <h2>{event.name}</h2>
+            <div className="image-container">
+                <img src={event.image_url} height='500px' width='500px'/>
+            </div>
+            <br />
+            <div className="date-time">Date: {event.date} | Time: {event.time}</div>
+           <br />
+            <div className="city-state">{event.city}, {event.state}</div>
+            <br />
+            <div className="event-description">{event.event_description}</div>
+            <br />
+            <div className="ticket-price">Ticket Price: ${event.ticket_price}</div>
         </div>
        
     )
